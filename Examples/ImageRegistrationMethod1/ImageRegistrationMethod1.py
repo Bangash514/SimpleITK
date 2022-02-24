@@ -31,8 +31,10 @@ if len(sys.argv) < 4:
           "<outputTransformFile>")
     sys.exit(1)
 
+#For Fixed-image
 fixed = sitk.ReadImage(sys.argv[1], sitk.sitkFloat32)
 
+#For moving-image
 moving = sitk.ReadImage(sys.argv[2], sitk.sitkFloat32)
 
 R = sitk.ImageRegistrationMethod()
